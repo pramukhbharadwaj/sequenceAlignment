@@ -1,4 +1,4 @@
-# sequenceAlignment
+# SequenceAlignment
 Memory and run time comparison between Needleman-Wunsch algorithm and Hirschberg's algorithm
 
 
@@ -16,5 +16,8 @@ T(2, n) ≤ cn
 Recursive function calls(as per the above recurrence relation) adds overhead and hence we can see the increase in the time.
 
 
-For memory, the crucial point is that we apply these recursive calls sequentially and reuse the working space from one call to the next. Thus, since we only work on one recursive call at a time, the total space usage is O(min(m,n)*2). Hence, the drop in the memory usage in the graph is justified when the input size is large. The decrease in memory is visible only after a threshold(input size of 224(m+n) in our case) because the overhead caused by the recursion compensates for the difference in the memory utilization before the threshold. Hence, we don't see any improvement.<img width="709" alt="MemoryComparison" src="https://user-images.githubusercontent.com/26455885/146857325-64f71db0-e8b8-48c0-bc9f-ad40de106685.png">
+For memory, the crucial point is that we apply these recursive calls sequentially and reuse the working space from one call to the next. Thus, since we only work on one recursive call at a time, the total space usage is O(min(m,n)*2). Hence, the drop in the memory usage in the graph is justified when the input size is large. The decrease in memory is visible only after a threshold(input size of 224(m+n) in our case) because the overhead caused by the recursion compensates for the difference in the memory utilization before the threshold. Hence, we don't see any improvement.
+
+
+<img width="709" alt="MemoryComparison" src="https://user-images.githubusercontent.com/26455885/146857325-64f71db0-e8b8-48c0-bc9f-ad40de106685.png">
 <img width="713" alt="TimeComparison" src="https://user-images.githubusercontent.com/26455885/146857329-9180d0be-5c1e-43da-8f96-07a7d29cd256.png">
